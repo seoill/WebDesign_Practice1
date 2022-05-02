@@ -1,0 +1,201 @@
+@charset "UTF-8";
+@import url(./reset.css);
+
+#wrap {width: 1200px; height: 700px; margin: 0 auto;}
+#wrap #header {width: 100%; height: 100px; display: flex; position: relative; z-index:3;}
+
+
+#wrap #header .left {width:180px; height: 100%; display: flex;}
+#wrap #header .left .logo-box {margin: auto;}
+#wrap #header .left .logo-box a img {width: 150px;}
+
+
+#wrap #header .right {width: 1020px; height: 100%;}
+#wrap #header .right #nav {width: 700px; margin: 25px 25px 25px auto;}
+#wrap #header .right #nav > ul {width: 100%; display: flex;}
+#wrap #header .right #nav > ul > li {width: 25%;}
+#wrap #header .right #nav > ul > li > a {
+  width: 100%; line-height: 50px; display:block;
+  text-align: center;
+  background-color: #fff;
+  transition: all .3s;
+}
+#wrap #header .right #nav > ul > li > a.on {background-color:#0066ad; color:#fff;}
+#wrap #header .right #nav > ul > li .sub-menu {width: 100%; display:none;}
+#wrap #header .right #nav > ul > li .sub-menu ul {}
+#wrap #header .right #nav > ul > li .sub-menu ul li {}
+#wrap #header .right #nav > ul > li .sub-menu ul li a {
+  width: 100%; line-height: 35px; display: block;
+  text-align: center;
+  background-color: #fff;
+}
+#wrap #header .right #nav > ul > li .sub-menu ul li:hover a {background-color: #30a3f3; color: #fff;}
+
+
+
+
+#wrap #main {width: 100%; height: 500px; position: relative; z-index: 2;}
+
+
+#wrap #main #section1 {width: 100%; height: 300px;}
+#wrap #main #section1 .slide-container {width: 100%; height: 100%;  position: relative;}
+#wrap #main #section1 .slide-container .slide-view {width: 100%; height: 100%;  position: relative; overflow: hidden;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap {width: 100%; position: relative;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide {position: absolute; top: 0; left: 0; width: 100%; height: 300px;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide1 {background-image: url(../img/gangwon_1.jpg);}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide2 {background-image: url(../img/gangwon_2.jpg);}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide3 {background-image: url(../img/gangwon_3.jpg);}
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide1 {z-index: 3;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide2 {z-index: 2;}
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide3 {z-index: 1;}
+
+
+#wrap #main #section1 .slide-container .slide-view .slide-wrap .slide h2 {
+  text-align: center; font-size: 72px; color: #fff;
+  line-height: 300px; width: 100%; 
+}
+
+/* 섹션 1종료 섹션 2 시작 */
+
+#wrap #main #section2 {width: 100%; height: 200px; display: flex;}
+#wrap #main #section2 .left {width: 33.333%; height: 100%; background-color: #fff;}
+#wrap #main #section2 .left .gap {width: 100%; height: 100%; padding-top:34px; position: relative;}
+#wrap #main #section2 .left .gap button {
+  width: 100px; height: 28px;  background-color: #30a3f3;
+  border: 1px solid #30a3f3; border-bottom:#fff; border-radius: 7px 7px 0 0 ;
+  position: absolute; top:7px; z-index:1; cursor:pointer; color: #fff;
+}
+#wrap #main #section2 .left .gap button.on {
+  background-color:#fff; top:3px; z-index:3;
+  height: 32px; cursor:default; color: #333;
+}
+#wrap #main #section2 .left .gap button:hover {background-color: #ddd; color: #333;}
+#wrap #main #section2 .left .gap button.notice-btn {left:5px}
+#wrap #main #section2 .left .gap button.gallery-btn {left:105px}
+
+/* 버튼 끝*/ 
+
+#wrap #main #section2 .left .gap .notice-box {
+  width: 100%; height: 166px;
+  border:1px solid #30a3f3; background-color: #fff;
+  position: absolute;
+}
+#wrap #main #section2 .left .gap .notice-box.on {display: none;}
+#wrap #main #section2 .left .gap .notice-box .notice-gap {padding: 15px 10px;}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul {width: 100%;}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul li {width: 100%; line-height: 33px; padding: 0 90px 0 14px; position: relative;}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul li a {
+  display:block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100%;
+  transition: all .3s;
+}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul li a:before {
+  content:' '; display: block; height: 3px; width: 3px; background-color: #333;
+  position: absolute; left: 0; top:50%; margin-top: -1.5px;
+}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul li a:hover {color: #4f97ca;}
+#wrap #main #section2 .left .gap .notice-box .notice-gap ul li span {display: block; position: absolute; right: 0; top: 0;}
+
+/* 공지사항 */
+
+#wrap #main #section2 .left .gap .gallery-box {width: 100%; height: 166px; border: 1px solid #999; background-color:#fff; display: none;}
+#wrap #main #section2 .left .gap .gallery-box.on {display: block;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap {width:100%; height:100%; padding: 20px 5px;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul {width: 100%; height: 100%; display: flex;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li {width: 33.333%; height: 100%;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li .col-gap {padding:0 5px; height: 100%; width: 100%;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li .col-gap .img-bg {width: 100%; height: 100%; background: url() no-repeat 50% 50%; background-size: cover; cursor: pointer;}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li:nth-child(1) .col-gap .img-bg{background-image:url(../img/gangwon_1.jpg);}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li:nth-child(2) .col-gap .img-bg{background-image:url(../img/gangwon_2.jpg);}
+#wrap #main #section2 .left .gap .gallery-box .gallery-gap ul li:nth-child(3) .col-gap .img-bg{background-image:url(../img/gangwon_3.jpg);}
+
+/* 섹션 2 좌측 끝 중간 시작 */
+/* 배너 만들기 */
+
+#wrap #main #section2 .center {width: 33.333%; height: 100%;}
+#wrap #main #section2 .center .gap {padding: 3px 0 0 10px;}
+#wrap #main #section2 .center .gap .title {width: 100%; line-height: 32px; background:#30a3f3; border-radius: 7px 7px 0 0 ;}
+#wrap #main #section2 .center .gap .title h2 {text-align: center; color: #fff; font-size: 16px; font-weight: 600;}
+#wrap #main #section2 .center .gap .img-box {width: 100%; height: 166px; border: 1px solid #30a3f3;}
+#wrap #main #section2 .center .gap .img-box ul {width: 100%; height: 100%;  padding: 2.5px 0;}
+#wrap #main #section2 .center .gap .img-box ul li {width: 100%; height: 50%;}
+#wrap #main #section2 .center .gap .img-box ul li a {width: 100%; height: 100%; display: block;}
+#wrap #main #section2 .center .gap .img-box ul li a .img-gap { width: 100%; height: 100%; padding: 2.5px 5px;}
+#wrap #main #section2 .center .gap .img-box ul li a .img-gap .img-bg {width: 100%; height: 100%; background: url() no-repeat 50% 50%; background-size: cover; display: flex;}
+#wrap #main #section2 .center .gap .img-box ul li:nth-child(1) a .img-gap .img-bg {background-image: url(../img/link_1.jpg);}
+#wrap #main #section2 .center .gap .img-box ul li:nth-child(2) a .img-gap .img-bg {background-image: url(../img/link_3.jpg);}
+#wrap #main #section2 .center .gap .img-box ul li a .img-gap .img-bg h3 {color: #fff; margin: auto; background-color: rgba(0,0,0,.5); padding: 5px;}
+#wrap #main #section2 .center .gap .img-box ul li:hover a .img-gap .img-bg {filter: brightness(150%) contrast(50%);}
+
+
+#wrap #main #section2 .right {width: 33.333%; height: 100%;}
+#wrap #main #section2 .right .gap {padding: 3px 0 0 10px;}
+#wrap #main #section2 .right .gap .title {width: 100%; line-height: 32px; background:#30a3f3; border-radius: 7px 7px 0 0 ;}
+#wrap #main #section2 .right .gap .title h2 {text-align: center; color: #fff; font-size: 16px; font-weight: 600;}
+#wrap #main #section2 .right .gap .img-box {width: 100%; height: 166px; border: 1px solid #30a3f3;}
+#wrap #main #section2 .right .gap .img-box ul {width: 100%; height: 100%;  padding: 0px 2.5px; display: flex;}
+#wrap #main #section2 .right .gap .img-box ul li {width: 33.333%; height: 100%;}
+#wrap #main #section2 .right .gap .img-box ul li a {width: 100%; height: 100%; display: block;}
+#wrap #main #section2 .right .gap .img-box ul li a .img-gap { width: 100%; height: 100%; padding: 5px 2.5px;}
+#wrap #main #section2 .right .gap .img-box ul li a .img-gap .img-bg {width: 100%; height: 100%; background: url() no-repeat 50% 50%; background-size: cover; display: flex;}
+#wrap #main #section2 .right .gap .img-box ul li:nth-child(1) a .img-gap .img-bg {background-image: url(../img/gangwon_1.jpg);}
+#wrap #main #section2 .right .gap .img-box ul li:nth-child(2) a .img-gap .img-bg {background-image: url(../img/gangwon_2.jpg);}
+#wrap #main #section2 .right .gap .img-box ul li:nth-child(3) a .img-gap .img-bg {background-image: url(../img/gangwon_3.jpg);}
+#wrap #main #section2 .right .gap .img-box ul li a .img-gap .img-bg h3 {color: #fff; margin: auto;}
+#wrap #main #section2 .right .gap .img-box ul li:hover a .img-gap .img-bg h3 {width: 100%; line-height: 154px; text-align: center; background-color: rgba(0, 129, 200, 0.7);}
+
+
+
+
+
+
+
+#wrap #footer {width: 100%; height: 100px; display: flex; position: relative; z-index:1;}
+
+
+#wrap #footer .left {width: 180px; height: 100%; display: flex;}
+#wrap #footer .left .logo-box {margin: auto;}
+#wrap #footer .left .logo-box a img {width: 150px; filter: grayscale(1);}
+
+#wrap #footer .right {width: 1020px; height: 100%; font-size: 12px;}
+#wrap #footer .right .top {width: 100%; height:50%; text-align: center; display: flex; }
+#wrap #footer .right .top .wrap {margin: auto;}
+#wrap #footer .right .top .wrap span {color: #666;}
+#wrap #footer .right .top .wrap span a {color: #666;}
+#wrap #footer .right .top .wrap span a:hover {color: #333; text-decoration: underline;}
+#wrap #footer .right .bottom {width: 100%; height: 50%;}
+#wrap #footer .right .bottom ul {text-align: center; color: #999;}
+#wrap #footer .right .bottom ul li {margin: 5px;}
+#wrap #footer .right .bottom ul li h4 {font-size: 12px;}
+
+
+
+
+
+/* 팝업창 (모달창) */
+
+#wrap #popup {
+  width: 100%; height: 100%; position: fixed; top:0; left:0; z-index: 4; 
+  background-color: rgba(0,0,0,.5); display: flex;
+}
+#wrap #popup .container {
+  width: 600px; background-color: #fff;
+  margin: auto;
+}
+#wrap #popup .container .gap {padding: 30px;}
+#wrap #popup .container a {display:block;width: 100%; text-align: right; font-size: 18px; font-weight: 700; color: #ccc;padding:0 0 15px 0;}
+#wrap #popup .container a:hover {color: #bbb;}
+#wrap #popup .container .gap ul {width: 100%;}
+#wrap #popup .container .gap ul li {border-bottom: 1px solid #ddd; line-height: 30px; font-size: 13px;}
+#wrap #popup .container .gap ul li:first-child {border-top: 3px solid #ccc; background-color: #eee;}
+#wrap #popup .container .gap ul li h2 {line-height: 50px; font-size: 20px; font-weight: 700; text-indent: 15px;}
+#wrap #popup .container .gap ul li .left {display: inline-block; width: 80px; background-color: #eee; text-align: center;}
+#wrap #popup .container .gap ul li .right {text-indent: 15px}
+#wrap #popup .container .gap ul li .wrap {padding: 30px 15px; }
+#wrap #popup .container .gap ul li .wrap p {line-height: 180%; text-align:justify;}
+#wrap #popup .container .gap ul li .wrap div {padding: 15px 0 0 0; width: 100%; text-align: center;}
+#wrap #popup .container .gap ul li .wrap div img {width: 100%;}
+#wrap #popup .container .gap ul li:last-child {border-bottom: none; display: block; text-align: center; padding: 30px 0 0 0 ;}
+#wrap #popup .container .gap ul li button {width: 80px; height: 30px; border: 1px solid #ddd; cursor: pointer;}
+#wrap #popup .container .gap ul li button:hover {background-color:#ddd;}
+#wrap #popup .container .gap ul li button:active {background-color:#ccc;}
